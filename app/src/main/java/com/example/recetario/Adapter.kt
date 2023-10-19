@@ -4,6 +4,7 @@ import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.accessibility.AccessibilityManager.AccessibilityServicesStateChangeListener
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.ListAdapter
@@ -14,8 +15,7 @@ import com.bumptech.glide.Glide
 class Adapter(val context: Context) : ListAdapter<Receta, Adapter.ViewHolder>(DiffCallBack) {
 
     lateinit var onItemClickListener: (Receta) -> Unit
-
-    inner class ViewHolder(private val view: View) : RecyclerView.ViewHolder(view) {
+        inner class ViewHolder(private val view: View) : RecyclerView.ViewHolder(view) {
         private val nombre: TextView = view.findViewById(R.id.t_nombre)
         private val dificultad: TextView = view.findViewById(R.id.t_dificultad)
         private val pais: TextView = view.findViewById(R.id.t_pais)
@@ -45,6 +45,10 @@ class Adapter(val context: Context) : ListAdapter<Receta, Adapter.ViewHolder>(Di
             bandera.setImageResource(imagen)
 
             Glide.with(context).load(receta.logo).into(logo)
+
+            view.setOnClickListener{
+                onItemClickListener(receta)
+            }
         }
     }
 

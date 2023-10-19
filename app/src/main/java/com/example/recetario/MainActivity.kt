@@ -1,5 +1,6 @@
 package com.example.recetario
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -20,6 +21,19 @@ class MainActivity : AppCompatActivity() {
         adapter = Adapter(this)
         recyclerView.adapter = adapter
         adapter.submitList(getListadoRecetas())
+
+        adapter.onItemClickListener = {
+            navegarDetalle(it)
+        }
+    }
+
+    private fun navegarDetalle(receta: Receta) {
+            val intent = Intent(this,DetailActivity::class.java)
+            //Para mandar datos de forma parcial.
+            //val bundle = Bundle()
+            //bundle.putParcelable("receta",receta)
+            intent.putExtra("receta", receta)
+            startActivity(intent)
     }
 
     private fun getListadoRecetas(): MutableList<Receta>? {
