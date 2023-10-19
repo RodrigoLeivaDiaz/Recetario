@@ -50,7 +50,7 @@
     <br>
    <p>Tecnologías Utilizadas:</p>
 <ul>
-<li>Kotlin: <a href="https://getbootstrap.com/docs/5.3/getting-started/introduction/">Enlace a la documentación oficial</a></li>
+<li>Kotlin: <a href="https://kotlinlang.org/docs/getting-started.html">Enlace a la documentación oficial</a></li>
 </ul>
 
    </details>
