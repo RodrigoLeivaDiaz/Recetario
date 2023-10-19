@@ -12,6 +12,6 @@
   <h2 style="font-family: 'Georgia', serif; font-size: 24px; font-weight: normal;">Descripción del proyecto 📊</h2>
 </div>
 <p align="justify">Este proyecto es un Recetario de platos de Sudamerica. Permite visualizar y buscar información relacionada con recetas de los paises y ver un detalle que incluye los ingredientes. El objetivo principal tener las recetas al alcanze de la mano, a traves de tu celular en todo momento.  </p>
-https://github.com/RodrigoLeivaDiaz/Recetario/assets/107962231/63b8b044-8618-4c40-9453-4bf94dd8e106
+<i class="fa-solid fa-utensils"></i>
 
 <hr>
