@@ -9,7 +9,8 @@ data class Receta(
     val nombre:String,
     val dificultad:Int,
     val pais:Pais,
-    val logo:String
+    val logo:String,
+    val logo2:String
 ): Parcelable
 
 enum class Pais {

@@ -25,7 +25,7 @@ class Adapter(val context: Context) : ListAdapter<Receta, Adapter.ViewHolder>(Di
         fun bind (receta: Receta) {
 
             nombre.text = receta.nombre
-            dificultad.text = receta.dificultad.toString()
+            dificultad.text = "Dificultad: "+receta.dificultad.toString()
             pais.text = receta.pais.toString()
 
             val imagen = when (receta.pais) {

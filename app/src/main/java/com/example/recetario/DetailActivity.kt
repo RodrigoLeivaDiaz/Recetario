@@ -25,6 +25,6 @@ class DetailActivity : AppCompatActivity() {
         t_nombre2.text = receta?.nombre
 
 
-        Glide.with(this).load(receta?.logo).into(t_plato2)
+        Glide.with(this).load(receta?.logo2).into(t_plato2)
     }
 }
